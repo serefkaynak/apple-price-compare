@@ -49,9 +49,14 @@ function ProductCard({ product, exchangeRate }: ProductCardProps) {
               <CircleDollarSign className="h-5 w-5 text-gray-700" />
               <span className="font-medium">Turkey Price</span>
             </div>
-            <span className="text-lg font-semibold">
+            <div className='flex gap-2'>
+            <span className="text-lg">
               ₺{turkishPrice.toLocaleString('tr-TR', { maximumFractionDigits: 0 })}
             </span>
+            <span className="text-lg font-semibold">
+              ${(turkishPrice/32.5).toLocaleString('en-US')}
+              </span>
+            </div>
           </div>
 
           <div className="pt-3 border-t">
